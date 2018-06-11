@@ -1,0 +1,167 @@
+.center {
+	justify-content: center;
+	justify-items: center;
+	justify-self: center;
+	align-items: center;
+	align-self: center;
+    align-content: center;
+    text-align: center;
+}
+
+.weatherMainWrapper {
+    display: grid;
+    grid-template-areas:"weatherTop"
+                        "weatherBottom";
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 1fr;
+    height: 90vh;
+    padding-top: 5vh;
+    background-color:rgba(82, 178, 239, 0.9);
+}
+
+.weatherTop {
+    grid-area: weatherTop;
+    display: grid;
+    grid-template-areas:"weatherTopCityIcon weatherTopCitySelected";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.weatherTopCityIcon {
+    grid-area: weatherTopCityIcon;
+    text-align: center;
+    vertical-align: middle;
+    margin: auto;
+}
+
+.weatherTopCityIcon > img {
+    height: 350px;
+}
+
+.weatherTopCitySelected {
+    grid-area: weatherTopCitySelected;
+    display: grid;
+    grid-template-areas:"weatherTopCitySelectedWeather"
+                        "weatherTopCitySelectedCity"
+                        "weatherTopCitySelectedTemp";
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.weatherTopCitySelectedWeather {
+    grid-area: weatherTopCitySelectedWeather;
+    display: grid;
+    grid-template-areas:"weatherTopCitySelectedWeatherWrapper"
+                        "currentWeatherDesc";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.weatherTopCitySelectedWeatherWrapper {
+    grid-area: weatherTopCitySelectedWeatherWrapper;
+    display: grid;
+    grid-template-areas:"currentWeatherIcon currentWeatherState";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.currentWeatherIcon {
+    grid-area: currentWeatherIcon;
+    height: 75px;
+}
+
+.currentWeatherState {
+    grid-area: currentWeatherState;
+}
+
+.currentWeatherDesc {
+    grid-area: currentWeatherDesc;
+}
+
+.weatherTopCitySelectedCity {
+    grid-area: weatherTopCitySelectedCity;
+
+}
+
+.weatherTopCitySelectedTemp {
+    grid-area: weatherTopCitySelectedTemp;
+}
+
+.weatherTopCitySelectedWeather > span {
+    font-size: 30px;
+    color: white;
+}
+.weatherTopCitySelectedCity > span,
+.weatherTopCitySelectedTemp > span,
+.weatherTopCitySelectedWeatherWrapper > span {
+    font-size: 50px;
+    color: white;
+}
+
+.weatherBottom {
+    grid-area: weatherBottom;
+    border: 2px solid black;
+    display: grid;
+    grid-template-areas:"weatherBottomOne weatherBottomTwo weatherBottomThree weatherBottomFour weatherBottomFive";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.weatherBottomOne {
+    grid-area: weatherBottomOne;
+}
+.weatherBottomTwo {
+    grid-area: weatherBottomTwo;
+}
+.weatherBottomThree {
+    grid-area: weatherBottomThree;
+}
+.weatherBottomFour {
+    grid-area: weatherBottomFour;
+}
+.weatherBottomFive {
+    grid-area: weatherBottomFive;
+}
+
+.weatherBottomOne, .weatherBottomTwo, .weatherBottomThree, .weatherBottomFour, .weatherBottomFive {
+    border: 1px solid grey;
+    display: grid;
+    grid-template-areas:"weatherBottomDay"
+                        "weatherBottomIcon"
+                        "weatherBottomState"
+                        "weatherBottomTemp";
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+
+.weatherBottomDay {
+    grid-area: weatherBottomDay;
+}
+
+.weatherBottomIcon {
+    grid-area: weatherBottomIcon;
+}
+
+.weatherBottomState {
+    grid-area: weatherBottomState;
+}
+
+.weatherBottomTemp {
+    grid-area: weatherBottomTemp;
+}
+
+.bottomIcon {
+    height: 75px;
+}
+
+
+.weatherBottomState > span {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.weatherBottomDay > span, .weatherBottomTemp > span {
+    color: aliceblue;
+}
